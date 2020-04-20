@@ -1,0 +1,9 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-color: azure;
+  background-image: url("../images/asfalt-light.png");
+  margin-top: 120px;
+}
