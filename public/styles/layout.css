@@ -21,6 +21,14 @@ body {
   font-family: Source Sans Pro;
 }
 
+main {
+  width: 90%;
+  vertical-align: middle;
+  background-color: #f4f1ec;
+  text-align: justify;
+  margin: auto;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
