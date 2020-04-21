@@ -19,6 +19,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -44,15 +47,15 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus mauris a diam maecenas sed enim. Augue neque gravida in fermentum. Tempor nec feugiat nisl pretium fusce id velit ut. Amet tellus cras adipiscing enim eu turpis egestas pretium. Leo a diam sollicitudin tempor id eu nisl nunc. Ultrices mi tempus imperdiet nulla malesuada pellentesque. Fringilla est ullamcorper eget nulla facilisi etiam. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus. Non pulvinar neque laoreet suspendisse. Amet mattis vulputate enim nulla aliquet porttitor lacus. Feugiat nibh sed pulvinar proin gravida. Ultricies tristique nulla aliquet enim tortor. Fames ac turpis egestas maecenas pharetra. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Purus in massa tempor nec feugiat. Ut aliquam purus sit amet.
-
-        Gravida arcu ac tortor dignissim convallis aenean et tortor at. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Lobortis elementum nibh tellus molestie nunc. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Posuere morbi leo urna molestie. Viverra justo nec ultrices dui sapien. Viverra mauris in aliquam sem fringilla ut morbi. Eget arcu dictum varius duis at. Mauris augue neque gravida in. Cras pulvinar mattis nunc sed blandit libero volutpat sed cras. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Turpis egestas sed tempus urna. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Amet purus gravida quis blandit turpis cursus in hac. Ut eu sem integer vitae. In est ante in nibh mauris.
-        
-        Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat. Volutpat maecenas volutpat blandit aliquam. Lobortis feugiat vivamus at augue. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Enim nulla aliquet porttitor lacus. A erat nam at lectus urna duis convallis convallis. Blandit volutpat maecenas volutpat blandit. Volutpat blandit aliquam etiam erat velit scelerisque in. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Tempor nec feugiat nisl pretium fusce id velit ut. Integer quis auctor elit sed. Pulvinar neque laoreet suspendisse interdum. Dui faucibus in ornare quam.
-        
-        Tempor orci dapibus ultrices in iaculis nunc. Amet nulla facilisi morbi tempus iaculis. At auctor urna nunc id. Laoreet sit amet cursus sit amet. Elit duis tristique sollicitudin nibh sit. Sit amet venenatis urna cursus eget nunc scelerisque. Orci dapibus ultrices in iaculis nunc. Et malesuada fames ac turpis egestas. Gravida neque convallis a cras semper auctor. Mauris cursus mattis molestie a iaculis. Libero nunc consequat interdum varius sit amet. Nisl pretium fusce id velit ut tortor pretium viverra suspendisse. In metus vulputate eu scelerisque felis.
-        
-        Enim nec dui nunc mattis enim ut tellus elementum. Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Lacus vel facilisis volutpat est velit egestas dui id. Urna cursus eget nunc scelerisque viverra mauris in aliquam sem. Amet tellus cras adipiscing enim. Tellus elementum sagittis vitae et leo duis. A arcu cursus vitae congue mauris rhoncus. Suspendisse faucibus interdum posuere lorem ipsum. Tincidunt arcu non sodales neque. Enim lobortis scelerisque fermentum dui faucibus in. Molestie nunc non blandit massa enim nec. At tellus at urna condimentum mattis. Nam aliquam sem et tortor consequat id porta nibh. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </form>
+      </section>
     </main>
   </body>
 </html>
