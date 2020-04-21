@@ -21,6 +21,10 @@ form textarea {
   font-family: "Bungee";
 }
 
+.counterMax {
+  color: red;
+}
+
 .container tweet-text {
   float: left;
 }
