@@ -17,6 +17,7 @@ $(document).ready(function() {
 }
 
   const createTweetElement = function(tweet) {
+    let escapedText = $("<div>").text(tweet.content.text).html();
     let markup = `
     <article class="tweet-article">
       <header class = "tweet-header">
@@ -24,7 +25,7 @@ $(document).ready(function() {
         <p class="name">${tweet.user.name}</p>
         <p class="username">${tweet.user.handle}</p>
       </header>
-      <p class="tweet">${tweet.content.text}</p>
+      <p class="tweet">${escapedText}</p>
       <footer>
         <p class="postAge">${timeago.format(tweet.created_at)}</p>
         <div class="footerImgs">
