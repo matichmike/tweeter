@@ -6,11 +6,10 @@
 
 
 $(document).ready(function() {
-  //timeago().render(document.querySelectorAll('.postAge'));
   const renderTweets = function(tweets) {
     for (tweet of tweets) {
       let $tweet = createTweetElement(tweet);
-      $('.tweet-container').append($tweet);
+      $('.tweet-container').prepend($tweet);
     }
   // loops through tweets
 // calls createTweetElement for each tweet
@@ -27,7 +26,7 @@ $(document).ready(function() {
       </header>
       <p class="tweet">${tweet.content.text}</p>
       <footer>
-        <p class="postAge">${new Date(tweet.created_at)}</p>
+        <p class="postAge">${timeago.format(tweet.created_at)}</p>
         <div class="footerImgs">
         <img src="images/flag.png">
         <img src="images/repost.png">
