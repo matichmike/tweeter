@@ -6,6 +6,17 @@
 
 
 $(document).ready(function() {
+  
+  const errorPopup = function(message) {
+    const $error = $(`<div id="errMessage"><span>${message}</span></div>`);
+    return $error;
+  };
+
+  const errorDisplay = function(error) {
+    let errMsg = errorPopup(error);
+    $(".new-tweet").prepend(errMsg).hide().slideDown();
+  }
+
   const renderTweets = function(tweets) {
     for (tweet of tweets) {
       let $tweet = createTweetElement(tweet);
@@ -43,14 +54,18 @@ $(document).ready(function() {
     event.preventDefault();
     let input = $("#tweet-text").val();
     if (input === "" || input === null) {
-      alert("The tweet is empty, there is nothing to submit!")
+      errorDisplay("🛑🛑🛑The tweet is empty, there is nothing to submit!🛑🛑🛑")
       return false;
     }
     if (input.length > 140) {
-      alert("Max character limit is exceeded, please make your post shorter than 140 characters!")
+      errorDisplay("🛑🛑🛑Max character limit is exceeded, please make your post shorter than 140 characters!🛑🛑🛑")
       return false;
     }
     
+    $('#errMessage').fadeOut(500, function() { 
+      $(this).remove(); 
+    });
+
     $.ajax({
       url: "/tweets",
       type: "POST",
