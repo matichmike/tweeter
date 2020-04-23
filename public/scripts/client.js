@@ -62,7 +62,7 @@ $(document).ready(function() {
       return false;
     }
     
-    $('#errMessage').fadeOut(500, function() { 
+    $('#errMessage').slideUp(300, function() { 
       $(this).remove(); 
     });
 
