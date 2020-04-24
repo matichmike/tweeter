@@ -4,14 +4,17 @@
   border-color: #545149;
   border-width: 5px;
   text-align: left;
-  height: 200px;
+  
+  
 }
 
 .tweet-article header {
   display: flex;
   height: 60px;
+  width: 100%;
   justify-content: space-between;
   margin-top: 0px;
+
 }
 
 .tweet-article header img {
@@ -21,14 +24,36 @@
 }
 
 .tweet-article .name {
-  position: absolute;
-  margin-left: 50px;
+  margin-left: 10px;
+  flex-grow: 1;
+  
 }
 
 .tweet-article .username {
   padding-right: 20px;
   font-weight: bold;
-  color: transparent;
+  color: lightblue;
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+} 
+
+.footerImgs > img {
+  height:25px;
+  width: 25px;
+  margin-right: 5px;
+}
+
+.tweet-article .postAge {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-size: small;
 }
 
 .tweet-article:hover .username {
@@ -40,6 +65,7 @@
   display: block;
 }
 
+
 .tweet-article .tweet {
   margin-left:10px;
   margin-right:10px;
@@ -49,20 +75,3 @@
   border-bottom-color: #545149;
 }
 
-.tweet-article .postAge {
-  margin-bottom: 10px;
-  margin-left: 10px;
-  font-size: small;
-}
-
-.footerImgs {
-  height: 50px;
-}
-
-.footerImgs > img {
-  float: right;
-  height:25px;
-  width: 25px;
-  margin-top: 0px;
-  margin-right: 5px;
-}

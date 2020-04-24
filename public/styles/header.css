@@ -1,9 +1,5 @@
-header {
-  height: 400px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background-color: azure;
+.avatar-header {
+  width:100%;
   background-image: url("../images/asfalt-light.png");
   margin-top: 120px;
 }

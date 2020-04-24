@@ -88,5 +88,9 @@ $(document).ready(function() {
     })
   }
 
+  $("#new-tweet-post").click(function() {
+    $(".new-tweet").slideToggle();
+  });
+
   loadTweets();
 })

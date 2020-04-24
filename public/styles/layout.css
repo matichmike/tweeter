@@ -21,14 +21,45 @@ body {
   font-family: Source Sans Pro;
 }
 
+.mainsection {
+  display:flex;
+  text-align: center;
+}
+
+.avatar {
+  background-color: coral;
+  color: #f4f1ec;
+  font-family: Bungee;
+}
+
+.new-tweet {
+  display: none;
+}
+
 main {
-  width: 90%;
   vertical-align: middle;
   background-color: #f4f1ec;
   text-align: justify;
-  margin: auto;
+}
+
+.header {
+  display: flex;
+  margin-top: 120px;
+}
+
+.container {
+  margin-top: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+/* Tablets adaptation*/
+@media only screen and (max-width: 1024px) {  
+  .mainsection {
+    flex-direction: column;
+  }
+}
