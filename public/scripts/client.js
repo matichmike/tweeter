@@ -6,7 +6,7 @@
 
 
 $(document).ready(function() {
-  
+  // Error handling
   const errorPopup = function(message) {
     const $error = $(`<div id="errMessage"><span>${message}</span></div>`);
     return $error;
@@ -16,17 +16,14 @@ $(document).ready(function() {
     let errMsg = errorPopup(error);
     $(".new-tweet").prepend(errMsg).hide().slideDown();
   }
-
+// tweets rendering and prepending them to the container
   const renderTweets = function(tweets) {
     for (tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('.tweet-container').prepend($tweet);
     }
-  // loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
 }
-
+// jQuery create new tweet
   const createTweetElement = function(tweet) {
     let escapedText = $("<div>").text(tweet.content.text).html();
     let markup = `
@@ -49,7 +46,7 @@ $(document).ready(function() {
     `
     return markup;
 }
-
+// new tweet submission via form and handling empty input or more than 140 characters limit
   $("#submit").submit(function(event) {
     event.preventDefault();
     let input = $("#tweet-text").val();
@@ -80,14 +77,14 @@ $(document).ready(function() {
       console.log(response);
     })
   })
-
+// loading tweets from /tweets objects
   const loadTweets = function() {
     $.ajax("/tweets", {method: "GET"})
     .then(function (response) {
       renderTweets(response);
     })
   }
-
+// toggling new tweet field on and off
   $("#new-tweet-post").click(function() {
     $(".new-tweet").slideToggle();
   });
