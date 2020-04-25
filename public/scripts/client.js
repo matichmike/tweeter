@@ -48,6 +48,7 @@ $(document).ready(function() {
 }
 // new tweet submission via form and handling empty input or more than 140 characters limit
   $("#submit").submit(function(event) {
+    
     event.preventDefault();
     let input = $("#tweet-text").val();
     if (input === "" || input === null) {
@@ -58,7 +59,7 @@ $(document).ready(function() {
       errorDisplay("🛑🛑🛑Max character limit is exceeded, please make your post shorter than 140 characters!🛑🛑🛑")
       return false;
     }
-    
+    $(".counter").text(140);
     $('#errMessage').slideUp(300, function() { 
       $(this).remove(); 
     });
@@ -70,7 +71,7 @@ $(document).ready(function() {
       data: $("#submit").serialize()
     })
     .then((response) => {
-      $('.tweet-container').empty();
+      $('#tweet-text').val('');
       loadTweets();
     })
     .catch((response) => {
