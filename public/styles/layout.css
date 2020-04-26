@@ -27,6 +27,7 @@ body {
 }
 
 .avatar {
+  background-image: url("../images/asfalt-light.png");
   background-color: coral;
   color: #f4f1ec;
   font-family: Bungee;

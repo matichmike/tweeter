@@ -88,6 +88,7 @@ $(document).ready(function() {
 // toggling new tweet field on and off
   $("#new-tweet-post").click(function() {
     $(".new-tweet").slideToggle();
+    $("#tweet-text").focus();
   });
 
   loadTweets();
